@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Welcome!</title>
+    <link>http://localhost:1312/</link>
+    <description>Recent content in Introduction on Welcome!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 13 Oct 2024 15:49:15 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1312/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1312/posts/test/</link>
+      <pubDate>Sun, 13 Oct 2024 15:49:15 +0800</pubDate>
+      <guid>http://localhost:1312/posts/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1312/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1312/menu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>渲染</title>
+      <link>http://localhost:1312/docs/ComputerGraphics/rendeing/render2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1312/docs/ComputerGraphics/rendeing/render2/</guid>
+      <description>&lt;p&gt;asdddddddddddddddddddddddddd&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>渲染2</title>
+      <link>http://localhost:1312/docs/ComputerGraphics/rendeing/Render/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1312/docs/ComputerGraphics/rendeing/Render/</guid>
+      <description>&lt;p&gt;asdddddddddddddddddddddddddd&lt;/p&gt;&#xA;&lt;p&gt;你好&lt;/p&gt;&#xA;&lt;p&gt;space&#xA;coconut&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
