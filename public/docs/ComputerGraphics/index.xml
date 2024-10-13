@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1312/docs/ComputerGraphics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Template</title>
+      <link>http://localhost:1312/docs/ComputerGraphics/template/</link>
+      <pubDate>Sun, 13 Oct 2024 15:49:15 +0800</pubDate>
+      <guid>http://localhost:1312/docs/ComputerGraphics/template/</guid>
+      <description>&lt;h1 id=&#34;hiden-in-menu&#34;&gt;&#xA;  hiden in menu&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hiden-in-menu&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;1233333333333&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

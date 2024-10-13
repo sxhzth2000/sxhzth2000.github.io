@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1312&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="记录学习和工作中遇到的C&#43;&#43;知识">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1312/posts/2024-06-14-C&#43;&#43;/">
+  <meta property="og:site_name" content="Welcome!">
+  <meta property="og:title" content="C&#43;&#43;">
+  <meta property="og:description" content="记录学习和工作中遇到的C&#43;&#43;知识">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-14T00:00:00+00:00">
+    <meta property="article:tag" content="Cpp">
+<title>C&#43;&#43; | Welcome!</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1312/posts/2024-06-14-C&#43;&#43;/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.4abd5334d4403b5831830e52a068f96aacc8522267dfbc7a16ab979fc5d448c1.js" integrity="sha256-Sr1TNNRAO1gxgw5SoGj5aqzIUiJn37x6FquXn8XUSME=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Welcome!</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ComputerGraphics/" class="">Computer Graphics</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>C&#43;&#43;</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#面试问题">面试问题</a>
+      <ul>
+        <li><a href="#浅拷贝深拷贝">浅拷贝，深拷贝</a></li>
+        <li><a href="#const">const</a></li>
+        <li><a href="#范围for循环">范围for循环</a>
+          <ul>
+            <li><a href="#范围-for-循环">范围 <code>for</code> 循环</a></li>
+            <li><a href="#传统-for-循环">传统 <code>for</code> 循环</a></li>
+            <li><a href="#范围-for-循环的优点">范围 <code>for</code> 循环的优点</a></li>
+            <li><a href="#什么时候使用范围-for-循环">什么时候使用范围 <code>for</code> 循环</a></li>
+          </ul>
+        </li>
+        <li><a href="#const-与函数">const 与函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#externc-c中c的代码片段">externC C++中c的代码片段</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#代码片段解析">代码片段解析</a></li>
+            <li><a href="#解释">解释</a></li>
+            <li><a href="#文件示例">文件示例</a></li>
+            <li><a href="#编译">编译</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    <a href="/posts/2024-06-14-C&#43;&#43;/">C&#43;&#43;</a>
+  </h1>
+  
+  <h5>June 14, 2024</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/c&#43;&#43;/">C&#43;&#43;</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/tags/cpp/">Cpp</a>
+  </div>
+  
+
+
+
+<p>记录学习和工作中遇到的C++知识</p>
+<h1 id="面试问题">
+  面试问题
+  <a class="anchor" href="#%e9%9d%a2%e8%af%95%e9%97%ae%e9%a2%98">#</a>
+</h1>
+<h2 id="浅拷贝深拷贝">
+  浅拷贝，深拷贝
+  <a class="anchor" href="#%e6%b5%85%e6%8b%b7%e8%b4%9d%e6%b7%b1%e6%8b%b7%e8%b4%9d">#</a>
+</h2>
+<p>深浅拷贝是面试经典问题，也是常见的一个坑</p>
+<ul>
+<li>浅拷贝：简单的赋值拷贝操作</li>
+<li>深拷贝：在堆区重新申请空间，进行拷贝操作</li>
+</ul>
+<h2 id="const">
+  const
+  <a class="anchor" href="#const">#</a>
+</h2>
+<p>对于非内部数据类型的输入参数，应该将“值传递”的方式改为“const 引用传递”，目的是提高效率。例如将void func(A a) 改为void func(const A &amp;a)。<br>
+对于内部数据类型的输入参数，不要将“值传递”的方式改为“const 引用传递”。否则既达不到提高效率的目的，又降低了函数的可理解性。例如void func(int x) 不应该改为void func(const int &amp;x)。</p>
+<p>（1）如果函数需要传入一个指针，是否需要为该指针加上const，把const加在指针不同的位置有什么区别；</p>
+<ul>
+<li>如果你希望函数中的指针不能修改它所指向的值，使用 <code>const int *ptr</code>。</li>
+<li>如果你希望函数中的指针不能修改它所指向的地址，使用 <code>int *const ptr</code>。</li>
+<li>如果你希望函数中的指针既不能修改它所指向的值，也不能修改它所指向的地址，使用 <code>const int *const ptr</code>。
+（2）如果写的函数需要传入的参数是一个复杂类型的实例，传入值参数或者引用参数有什么区别，什么时候需要为传入的引用参数加上const。</li>
+<li><strong>传值参数</strong>：适用于小对象或不介意性能开销的场景。</li>
+<li><strong>传引用参数</strong>：适用于需要修改传入对象且希望避免复制开销的场景。</li>
+<li><strong>传 <code>const</code> 引用参数</strong>：适用于希望避免复制开销且保证函数内部不修改传入对象的场景。</li>
+</ul>
+<h2 id="范围for循环">
+  范围for循环
+  <a class="anchor" href="#%e8%8c%83%e5%9b%b4for%e5%be%aa%e7%8e%af">#</a>
+</h2>
+<p>这里的 <code>for (const auto&amp; offset : offsets)</code> 是一种特定的 C++ 11 引入的语法，称为<strong>范围 <code>for</code> 循环</strong>（range-based for loop）。它简化了对容器或数组的遍历。让我们对比一下范围 <code>for</code> 循环和传统的 <code>for</code> 循环，并解释为什么在这种情况下使用范围 <code>for</code> 循环。</p>
+<h3 id="范围-for-循环">
+  范围 <code>for</code> 循环
+  <a class="anchor" href="#%e8%8c%83%e5%9b%b4-for-%e5%be%aa%e7%8e%af">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#f92672">::</span>array<span style="color:#f92672">&lt;</span>Eigen<span style="color:#f92672">::</span>Vector2f, <span style="color:#ae81ff">4</span><span style="color:#f92672">&gt;</span> offsets <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.25</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">0.25</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.75</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">0.75</span>}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> offset : offsets) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (insideTriangle(x <span style="color:#f92672">+</span> offset.x(), y <span style="color:#f92672">+</span> offset.y(), t.v)) {
+</span></span><span style="display:flex;"><span>        coverage <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0.25</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="传统-for-循环">
+  传统 <code>for</code> 循环
+  <a class="anchor" href="#%e4%bc%a0%e7%bb%9f-for-%e5%be%aa%e7%8e%af">#</a>
+</h3>
+<p>如果使用传统的 <code>for</code> 循环，上述代码可以重写为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#f92672">::</span>array<span style="color:#f92672">&lt;</span>Eigen<span style="color:#f92672">::</span>Vector2f, <span style="color:#ae81ff">4</span><span style="color:#f92672">&gt;</span> offsets <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.25</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">0.25</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.75</span>},
+</span></span><span style="display:flex;"><span>    Eigen<span style="color:#f92672">::</span>Vector2f{<span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">0.75</span>}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (size_t i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> offsets.size(); <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> offset <span style="color:#f92672">=</span> offsets[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (insideTriangle(x <span style="color:#f92672">+</span> offset.x(), y <span style="color:#f92672">+</span> offset.y(), t.v)) {
+</span></span><span style="display:flex;"><span>        coverage <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0.25</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="范围-for-循环的优点">
+  范围 <code>for</code> 循环的优点
+  <a class="anchor" href="#%e8%8c%83%e5%9b%b4-for-%e5%be%aa%e7%8e%af%e7%9a%84%e4%bc%98%e7%82%b9">#</a>
+</h3>
+<ol>
+<li>
+<p><strong>简洁性</strong>：范围 <code>for</code> 循环使代码更简洁，更易读。它消除了管理循环索引变量的需要，并减少了潜在的错误（例如数组越界）。</p>
+</li>
+<li>
+<p><strong>可读性</strong>：通过范围 <code>for</code> 循环，可以直观地看出程序在遍历整个容器。这使得代码更易于理解和维护。</p>
+</li>
+<li>
+<p><strong>安全性</strong>：范围 <code>for</code> 循环避免了循环变量超出数组边界的风险，因为它自动遍历整个容器。</p>
+</li>
+<li>
+<p><strong>效率</strong>：范围 <code>for</code> 循环在某些情况下可以更高效，因为编译器可以对其进行优化。</p>
+</li>
+</ol>
+<h3 id="什么时候使用范围-for-循环">
+  什么时候使用范围 <code>for</code> 循环
+  <a class="anchor" href="#%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e4%bd%bf%e7%94%a8%e8%8c%83%e5%9b%b4-for-%e5%be%aa%e7%8e%af">#</a>
+</h3>
+<p>范围 <code>for</code> 循环非常适合遍历整个容器（例如数组、<code>std::vector</code> 等），特别是当不需要使用循环索引时。它可以提高代码的可读性和维护性，使代码更简洁。</p>
+<p>在你的例子中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> offset : offsets) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (insideTriangle(x <span style="color:#f92672">+</span> offset.x(), y <span style="color:#f92672">+</span> offset.y(), t.v)) {
+</span></span><span style="display:flex;"><span>        coverage <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0.25</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>使用范围 <code>for</code> 循环遍历 <code>offsets</code> 数组是非常合适的，因为我们只需要访问每个元素，而不需要使用索引。这种方式使代码更简洁和清晰。</p>
+<h2 id="const-与函数">
+  const 与函数
+  <a class="anchor" href="#const-%e4%b8%8e%e5%87%bd%e6%95%b0">#</a>
+</h2>
+<h1 id="externc-c中c的代码片段">
+  externC C++中c的代码片段
+  <a class="anchor" href="#externc-c%e4%b8%adc%e7%9a%84%e4%bb%a3%e7%a0%81%e7%89%87%e6%ae%b5">#</a>
+</h1>
+<p>是的，如果其他C文件（以 <code>.c</code> 扩展名保存）使用了你提到的代码片段，它将以C的形式编译。这个代码片段的设计目的是为了使得C和C++编译器都能正确处理代码，具体来说：</p>
+<h3 id="代码片段解析">
+  代码片段解析
+  <a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%89%87%e6%ae%b5%e8%a7%a3%e6%9e%90">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 如果是C++编译器，定义一个宏
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 这里是C和C++都能编译的代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> y;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 函数声明
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">modifyPoint</span>(<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> <span style="color:#f92672">*</span>p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span></code></pre></div><h3 id="解释">
+  解释
+  <a class="anchor" href="#%e8%a7%a3%e9%87%8a">#</a>
+</h3>
+<ol>
+<li>
+<p><strong><code>extern &quot;C&quot;</code></strong>：</p>
+<ul>
+<li>在C++编译环境中，<code>extern &quot;C&quot;</code> 告诉编译器使用C语言链接规范来处理被包含在 <code>extern &quot;C&quot;</code> 块中的函数或变量声明。</li>
+<li>在C语言编译环境中，<code>extern &quot;C&quot;</code> 语法会被忽略，因此不会影响C语言编译过程。</li>
+</ul>
+</li>
+<li>
+<p><strong>条件编译</strong>：</p>
+<ul>
+<li><code>#ifdef __cplusplus</code> 和 <code>#endif</code> 用于判断是否在C++编译环境中。如果是C++编译器，则会定义 <code>extern &quot;C&quot;</code>，否则不做任何处理。</li>
+<li>在C编译环境中，<code>__cplusplus</code> 宏未定义，因此 <code>extern &quot;C&quot;</code> 部分不会出现，代码将以C语言编译。</li>
+</ul>
+</li>
+</ol>
+<h3 id="文件示例">
+  文件示例
+  <a class="anchor" href="#%e6%96%87%e4%bb%b6%e7%a4%ba%e4%be%8b">#</a>
+</h3>
+<p>假设有两个文件，一个是C语言源文件 <code>file1.c</code>，另一个是C++语言源文件 <code>file2.cpp</code>，它们都需要使用相同的头文件 <code>common.h</code>。</p>
+<p><strong><code>common.h</code></strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#ifndef COMMON_H
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define COMMON_H
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> y;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">modifyPoint</span>(<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> <span style="color:#f92672">*</span>p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef __cplusplus
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif </span><span style="color:#75715e">// COMMON_H
+</span></span></span></code></pre></div><p><strong><code>file1.c</code></strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;common.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">modifyPoint</span>(<span style="color:#66d9ef">struct</span> Point <span style="color:#f92672">*</span>p) {
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">-&gt;</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">-&gt;</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> Point pt <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">modifyPoint</span>(<span style="color:#f92672">&amp;</span>pt);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;pt.x = %d, pt.y = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pt.x, pt.y);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong><code>file2.cpp</code></strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;common.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printPoint</span>(<span style="color:#66d9ef">const</span> Point <span style="color:#f92672">&amp;</span>p) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Point(&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.x <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.y <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;)&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    Point pt <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    modifyPoint(<span style="color:#f92672">&amp;</span>pt);
+</span></span><span style="display:flex;"><span>    printPoint(pt);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="编译">
+  编译
+  <a class="anchor" href="#%e7%bc%96%e8%af%91">#</a>
+</h3>
+<ul>
+<li>
+<p><strong>编译C文件</strong>：当 <code>file1.c</code> 被C编译器（如 <code>gcc</code>）编译时，编译器将处理 <code>common.h</code> 文件中的 <code>extern &quot;C&quot;</code> 语法，并按照C语言规范处理 <code>modifyPoint</code> 函数声明和实现。</p>
+</li>
+<li>
+<p><strong>编译C++文件</strong>：当 <code>file2.cpp</code> 被C++编译器（如 <code>g++</code>）编译时，编译器将处理 <code>common.h</code> 文件中的 <code>extern &quot;C&quot;</code> 语法，确保 <code>modifyPoint</code> 函数使用C链接规范，以便于链接C语言和C++代码。</p>
+</li>
+</ul>
+<h3 id="总结">
+  总结
+  <a class="anchor" href="#%e6%80%bb%e7%bb%93">#</a>
+</h3>
+<ul>
+<li><strong>C文件</strong>（<code>.c</code>）编译器会忽略 <code>extern &quot;C&quot;</code> 语法，只按照C语言规范编译代码。</li>
+<li><strong>C++文件</strong>（<code>.cpp</code>）编译器会处理 <code>extern &quot;C&quot;</code> 语法，确保C语言函数可以被C++代码正确链接。</li>
+<li>使用 <code>extern &quot;C&quot;</code> 和条件编译，可以使头文件同时兼容C和C++编译环境，支持跨语言的代码共享。</li>
+</ul></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#面试问题">面试问题</a>
+      <ul>
+        <li><a href="#浅拷贝深拷贝">浅拷贝，深拷贝</a></li>
+        <li><a href="#const">const</a></li>
+        <li><a href="#范围for循环">范围for循环</a>
+          <ul>
+            <li><a href="#范围-for-循环">范围 <code>for</code> 循环</a></li>
+            <li><a href="#传统-for-循环">传统 <code>for</code> 循环</a></li>
+            <li><a href="#范围-for-循环的优点">范围 <code>for</code> 循环的优点</a></li>
+            <li><a href="#什么时候使用范围-for-循环">什么时候使用范围 <code>for</code> 循环</a></li>
+          </ul>
+        </li>
+        <li><a href="#const-与函数">const 与函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#externc-c中c的代码片段">externC C++中c的代码片段</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#代码片段解析">代码片段解析</a></li>
+            <li><a href="#解释">解释</a></li>
+            <li><a href="#文件示例">文件示例</a></li>
+            <li><a href="#编译">编译</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
