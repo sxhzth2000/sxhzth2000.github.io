@@ -55,3 +55,11 @@ https://github.com/alex-shpak/hugo-book
     integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
   {{- end -}}
 {{- end -}}
+
+<!---math support by katex  https://katex.org/docs/browser.html
+blog
+https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/
+https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/
+-->
+{{ if .Params.math }}{{ partial "docs/katex.html" . }}{{ end }}
+
