@@ -1,6 +1,7 @@
 ---
 title: Introduction
-type: docs
+type: doc
+math: true
 ---
 ## This Blog
 
@@ -11,7 +12,7 @@ Most Q&A can find in [here](https://gohugo.io/getting-started/quick-start/).
 
 ## About me
 
-![123](https://i.imgur.com/IoY9AvW.png)
+
 
 My name is Hao Tan (谭浩). I am a player and a coder who is passionate about video games and computer graphics.
 
@@ -21,6 +22,9 @@ My name is Hao Tan (谭浩). I am a player and a coder who is passionate about v
 2017-2022: Bachelor of EISAT at  [Anhui Polytechnic University.](https://www.ahpu.edu.cn/)
 
 ---
+$$
+I(\mathbf{p}, \mathbf{d}) = E(\mathbf{p}, \mathbf{d}) + \int_{\Omega} f_r(\mathbf{p}, \mathbf{d}, \mathbf{d'}) L(\mathbf{p}, \mathbf{d'}) \cos(\theta') \, d\mathbf{d'}
+$$
 
-
+---
 

@@ -1,0 +1,17 @@
+# 忽略 .obsidian 文件夹
+/content/.obsidian/
+
+# 忽略 .hugo_build.lock 文件
+hugo_build.lock
+
+runhugo.bat
+
+/public/
+
+/content.bn/
+
+/content.en/
+
+/content.ru/
+
+/content.zh/

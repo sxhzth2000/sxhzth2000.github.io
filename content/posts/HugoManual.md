@@ -1,24 +1,18 @@
 ---
-title: "HugoManual"
-date: 2024-10-13T15:49:15+08:00
+title: HugoManual
+date: 2024-10-14
 author: "111111111"
 bookSearchExclude: true
-bookHidden: true
+bookHidden: false
+math: true
 ---
+hugo使用手册
   <!--more-->
-
-- [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
-- [Columns]({{< relref "/docs/shortcodes/columns" >}})
-- [Expand]({{< relref "/docs/shortcodes/expand" >}})
-- [Hints]({{< relref "/docs/shortcodes/hints" >}})
-- [KaTeX]({{< relref "/docs/shortcodes/katex" >}})
-- [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
-
 ## RealReference
-[Columns]({{< relref "/docs/shortcodes/columns" >}})
+[Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}})
+
 ```
-[文章<<Columns>>的引用测试]({{< relref "/docs/shortcodes/columns" >}})
+[Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}})
 ```
 ---
 ## RelativeReference
@@ -71,4 +65,45 @@ qweqweeqweqweqwe
     qwe
     qwe
 
-## 
+---
+
+## Math Suport  
+### katex  latex   
+
+https://katex.org/docs/browser.html  
+blog：  
+https://mertbakir.gitlab.io/hugo/math-typesetting-in-hugo/  
+https://edwinkofler.com/posts/render-latex-with-katex-in-hugo-blog/  
+themes\hugo-book\layouts\partials\docs\html-head.html  
+themes\hugo-book\layouts\partials\docs\katex.html
+### use "///"
+use "///" because"//" is not work for line break.
+
+
+---
+
+## Math function order
+
+$$
+I(\mathbf{p}, \mathbf{d}) = E(\mathbf{p}, \mathbf{d}) + \int_{\Omega} f_r(\mathbf{p}, \mathbf{d}, \mathbf{d'}) L(\mathbf{p}, \mathbf{d'}) \cos(\theta') \, d\mathbf{d'}
+$$
+
+$$
+\begin{equation}
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+\end{equation}
+$$
+
+
+	 // first equation whitout number
+	// second one with number cause use this 
+	```````````````````````````````````````
+
+	\begin{equation}
+	math function
+	\end{equation}
+
+	````````````````````````````````````````
+
+---
+
