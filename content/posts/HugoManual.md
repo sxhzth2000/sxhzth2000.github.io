@@ -2,71 +2,29 @@
 title: HugoManual
 date: 2024-10-14
 author: "111111111"
-bookSearchExclude: true
+math: true
 bookHidden: false
 math: true
+bookSearchExclude: true
 ---
 hugo使用手册
   <!--more-->
+## Search
+
+搜索 coconut
+谭浩
+
+---
+
 ## RealReference
-[Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}})
 
-```
-[Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}})
-```
----
 ## RelativeReference
+
 [Reference]({{< ref "_index" >}})
 ```
 [Reference]({{< ref "_index" >}})
 ```
 ---
-
-## Button
-
-{{< button relref="/" >}}Get Home{{< /button >}}
-{{< button href="https://github.com/alex-shpak/hugo-book" >}}
-Contribute{{< /button >}}{{< button relref="/" >}}Get Home{{< /button >}}
-
----
-## Columns
-
-{{< columns >}}
-## Left Content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
-Miseratus fonte Ditis conubia.
-
-<--->
-
-## Mid Content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter!
-
-<--->
-
-## Right Content
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
-Miseratus fonte Ditis conubia.
-{{< /columns >}}
-
-## Block
-### Block1
-```
-qweqweeqweqweqwe
-```
-### Block2
-    cpp
-    qweqweqwe
-    qwe
-    qwe
-    qwe
-
----
-
 ## Math Suport  
 ### katex  latex   
 
@@ -81,6 +39,7 @@ use "///" because"//" is not work for line break.
 
 
 ---
+
 
 ## Math function order
 
@@ -104,6 +63,4 @@ $$
 	\end{equation}
 
 	````````````````````````````````````````
-
 ---
-

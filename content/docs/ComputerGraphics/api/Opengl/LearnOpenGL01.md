@@ -8,12 +8,12 @@ bookSearchExclude: true
 bookHidden: true
 math: true
 draft: false
+weigth: 20
 ---
 **This blog follow  [learnopengl](https://learnopengl.com/)**.
 <!--more-->
 ---
 
-###### 1123123
 # Getting Started
 ## Creating a window
 
@@ -23,7 +23,7 @@ draft: false
 
 >  **NOTE**: 1. Include glad before glfw. 2. don forgot add "glad.c" to source file.
 ---
-
+谭浩
 2. Code
 ```
 int main()

@@ -1,15 +1,10 @@
 ---
 weight: 1
+bookCollapseSection: true
 ---
-1. [渲染]({{< ref "template" >}})  
-2. [Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}})
-
----
-
-
----
-
-| [Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}}) |
-| ---------------------------------------------------------- |
-| [Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}}) |
-| [Games101]({{< relref "/posts/2024-06-23 GAMES101.md" >}}) |
+# GetStart
+1. [Games101]({{< ref "course\GAMES101.md" >}})
+# API
+1. [opengl]({{< relref "docs\ComputerGraphics\api\OpenGL\LearnOpenGL01.md" >}})
+2. Vulkan
+3.

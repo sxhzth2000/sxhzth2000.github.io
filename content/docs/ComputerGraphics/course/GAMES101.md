@@ -2,6 +2,9 @@
 title: GAMES 101
 date: 2024-06-23
 math: true
+
+bookSearchExclude: true
+
 categories:
   - graphics
 tags:
@@ -10,6 +13,10 @@ tags:
   - 线性代数
 ---
 学习games101
+
+
+coconut
+
 
 <!--more-->
 
@@ -33,6 +40,7 @@ Overview of Computer Graphics
 The use Of computers to synthesize and manipulate
 visual information.
 
+fuck me
 
 ##  Why study Computer Graphics?
 ### Application
