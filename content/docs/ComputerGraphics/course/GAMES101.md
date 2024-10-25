@@ -3,7 +3,7 @@ title: GAMES 101
 date: 2024-06-23
 math: true
 
-bookSearchExclude: true
+bookSearchExclude: false
 
 categories:
   - graphics

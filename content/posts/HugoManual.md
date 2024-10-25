@@ -11,8 +11,7 @@ hugo使用手册
   <!--more-->
 ## Search
 
-搜索 coconut
-谭浩
+搜索test coconut
 
 ---
 
